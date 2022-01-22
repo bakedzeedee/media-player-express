@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <audio name="player" controls autoplay src=<%=source%> onended="
+        const slashIndex = location.pathname.lastIndexOf('/');
+        const id = parseInt(location.pathname.slice(slashIndex + 1)) + 1;
+        location.pathname='songs/' + id;
+        ">
+    </audio>
+</body>
+
+</html>
